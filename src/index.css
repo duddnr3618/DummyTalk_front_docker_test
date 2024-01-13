@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+    height: 100%
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(38 38 38) transparent;
+}
+
+*::-webkit-scrollbar {
+    @apply bg-transparent w-2;
+}
+
+*::-webkit-scrollbar-thumb {
+    @apply bg-secondary-dark rounded-full
+}
+
+.scrollbar-hidden {
+    scrollbar-color: transparent transparent;
+}
+
+.scrollbar-hidden:hover {
+    scrollbar-color: rgb(163 163 163) transparent;
+}
+
+.scrollbar-hidden::-webkit-scrollbar-thumb {
+    @apply bg-transparent;
+}
+.scrollbar-hidden:hover::-webkit-scrollbar-thumb {
+    @apply bg-secondary-border;
+}
+

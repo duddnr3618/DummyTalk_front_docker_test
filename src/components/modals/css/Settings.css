@@ -1,0 +1,46 @@
+/* Settings.css */
+
+.settings-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.settings-container h2 {
+    margin-bottom: 16px;
+    font-size: 24px;
+    color: #333;
+}
+
+.settings-container p {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #555;
+}
+
+.open-settings-btn {
+    padding: 12px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.open-settings-btn:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+.open-settings-btn::before {
+    content: '⚙';
+    margin-right: 8px;
+    font-size: 24px;
+}
+
+/* Modal Styles */
+/* ... Include your existing modal styles here ... */

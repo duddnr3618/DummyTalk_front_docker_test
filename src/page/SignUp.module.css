@@ -1,0 +1,112 @@
+.full{
+  height: 92%;
+  overflow: hidden;
+  background:#0B192E;
+}
+.page {
+  display: flex;
+  margin: 10px auto;
+  max-width: 500px;
+  border-radius: 5px;
+  flex-direction: column;
+  background-color: white;
+  justify-content: center;
+  padding: 40px 50px 50px 50px;
+  transform: translate(0%, 35%);
+}
+
+.titleWrap {
+  margin-bottom : 13px;
+  color:#0B192E;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.titleWrapForm{
+  color: #fff;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.findPassword{
+  color : blue;
+  cursor: pointer;
+  font-weight: 100;
+  margin-left: auto;
+}
+
+.input {
+  width: 100%;
+  border: none;
+  height: 23px;
+  outline: none;
+  font-size: 14px;
+  font-weight: 400;
+  margin-left: 10px;
+}
+
+.input::placeholder {
+  color: #dadada;
+}
+.inputTitle {
+  color: #262626;
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 26px;
+}
+
+
+.inputWrap {
+  padding: 5px;
+  display: flex;
+  margin-top: 20px;
+  border-radius: 8px;
+  background-color: white;
+  border: 1px solid #e2e0e0;
+}
+
+.inputWrap:focus-within {
+  border: 1px solid #9e30f4;
+}
+
+.bottomButton {
+  width: 40%;
+  height: 38px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin: 30px 20px;
+  font-weight: bold;
+  border-radius: 64px;
+  background-color: #9e30f4;
+}
+.googleLogin {
+  width: 100%;
+  height: 48px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.bottomButton:disabled {
+  background-color: #dadada;
+  color: white;
+}
+
+.errorMessageWrap {
+  color: #ef0000;
+  margin-top: 8px;
+  font-size: 12px;
+}
+.submit{
+  width: 30%;
+  height: 17px;
+  outline: none;
+  font-size: 14px;
+  font-weight: 400;
+}
+.submitWrap{
+  margin-top: 18px;
+}

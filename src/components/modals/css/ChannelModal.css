@@ -1,0 +1,71 @@
+.create-channel-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.create-channel-modal-content {
+    background-color: #1C2D41;
+    padding: 30px;
+    border-radius: 8px;
+    width: 30%;
+    min-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: 'Arial', sans-serif;
+}
+
+.create-channel-modal-close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.create-channel-modal-close:hover {
+    color: #000;
+}
+
+.create-channel-modal-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.create-channel-modal-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.create-channel-modal-form button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.create-channel-modal-form button:first-child {
+    background-color: #51CBB6;
+    color: white;
+}
+
+.create-channel-modal-form button:last-child {
+    background-color: #2196F3;
+    color: white;
+}
+
+.create-channel-modal-form button:hover {
+    opacity: 0.8;
+}

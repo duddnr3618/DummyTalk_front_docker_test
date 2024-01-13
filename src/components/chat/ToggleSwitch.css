@@ -1,0 +1,118 @@
+:root {
+    --accent-color: #04da97;
+    --border-thickness: 3px; /* Reduce the border thickness */
+    --rounded-edge: 25px; /* Reduce the border-radius */
+    --main-font-size: 20px; /* Reduce the font size */
+}
+
+.uniqueToggleBody {
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -116px;
+    background-color: #162B46;
+    font-family: sans-serif;
+    margin-top: -16px;
+}
+.uniqueToggleContainer {
+    perspective: 400px; /* Reduce the perspective value */
+}
+
+.uniqueSwitch {
+    position: relative;
+    border: solid var(--border-thickness) var(--accent-color);
+    border-radius: var(--rounded-edge);
+    transition: transform cubic-bezier(0, 0, 0.30, 2) 0.4s;
+    transform-style: preserve-3d;
+}
+
+.uniqueSwitch > input[type="radio"] {
+    display: none;
+}
+
+.uniqueSwitch > #creativeChoice:checked ~ #uniqueFlap {
+    transform: rotateY(-200deg);
+}
+
+.uniqueSwitch > #creativeChoice:checked ~ #uniqueFlap > .content {
+    transform: rotateY(-200deg);
+}
+
+.uniqueSwitch > #productiveChoice:checked ~ #uniqueFlap {
+    transform: rotateY(0deg);
+}
+
+.uniqueSwitch > label {
+    display: inline-block;
+    min-width: 100px; /* Reduce the label's width */
+    padding: 10px; /* Reduce the padding */
+    font-size: var(--main-font-size);
+    text-align: center;
+    color: var(--accent-color);
+    cursor: pointer;
+}
+
+.uniqueSwitch > label,
+.uniqueSwitch > #uniqueFlap {
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.uniqueSwitch > #uniqueFlap {
+    position: absolute;
+    top: calc(0px - var(--border-thickness));
+    left: 50%;
+    height: calc(100% + var(--border-thickness) * 2);
+    width: 40%; /* Reduce the width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--main-font-size);
+    background-color: var(--accent-color);
+    border-top-right-radius: var(--rounded-edge);
+    border-bottom-right-radius: var(--rounded-edge);
+    transform-style: preserve-3d;
+    transform-origin: left;
+    transition: transform cubic-bezier(0.4, 0, 0.2, 1) 0.5s;
+}
+
+.uniqueSwitch > #uniqueFlap > .content {
+    color: #162B46;
+    transition: transform 0s linear 0.25s;
+    transform-style: preserve-3d;
+}
+
+.uniqueSwitch > label:hover::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+    width: 120px;
+    background-color: #fff;
+    color: #162B46;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    font-size: 14px;
+    line-height: 1.4;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+.uniqueSwitch > #creativeChoice:hover ~ label[for="creativeChoice"]::after {
+    content: '요약은 지금부터 300개의 채팅만 가능합니다';
+    visibility: visible;
+    opacity: 1;
+}
+
+.uniqueSwitch > #productiveChoice:hover ~ label[for="productiveChoice"]::after {
+    content: '요약중입니다, 조금만 기다려주세요';
+    visibility: visible;
+    opacity: 1;
+}
